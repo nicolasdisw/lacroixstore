@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 body{
     background-color: rgba(234, 234, 234, 0.679);
     color: aliceblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 
 }
@@ -174,32 +175,64 @@ body{
 /* ABOUT */
 
 .about-us{
-height: auto;
+  height: auto;
   width: 100%;
   padding: 90px 0;
-  background: #ddd;
+  background: #848181;
+}
+.conteinerabout{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: 
+  "img text"
+  ;
+}
+@media(max-width:768px){
+  .conteinerabout{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50%);
+    align-items: center;
+    grid-template-areas: 
+    "img"
+    "text"
+    ;
+  }
 }
 .pic{
   height: auto;
   width:  302px;
 }
-.about{
-  width: 1130px;
-  max-width: 85%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.about-img{
+  grid-area: "img";
+  text-align: center;
 }
-@media(max-width:930px){
-  .about{
-    flex-direction: column;
+.text{
+  grid-area: "text";
+  text-align: center;
+}
+.text h2{
+  text-align: center;
+    font-size: 90px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    color: #fff;
+}
+.text p{
+  text-align: left;
+  padding: 0 10px;
+  font-size: 19px; 
+}
+@media(max-width:768px){
+  .text p{
     text-align: center;
+    padding: 0 10px;
   }
+ 
 }
 .about p{
-  color: #000;
-  font-size: 23px;  
+  color: #000; 
 }
 @media(max-width:768px){
   .about p{
@@ -213,31 +246,8 @@ height: auto;
     padding: 30px;
   }
 }
-.text{
-  width: 540px;
-  padding: 10px;
-}
-.text h2{
-  font-size: 90px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.text h5{
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
 span{
   color: #000;
-}
-.text p{
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-.data{
-  margin-top: 30px;
 }
 .hire{
   font-size: 18px;
@@ -248,6 +258,12 @@ span{
   padding: 8px 25px;
   border-radius: 6px;
   transition: 0.5s;
+  border-radius: 1%;
+  text-decoration: none;
+
+  &:hover {
+      background-color: #3A7680;
+  }
 }
 .hire:hover{
   background: #000;
@@ -274,9 +290,9 @@ span{
     justify-content: space-around;
     padding: 20px 10px;
 }
-
 .info-text{
-font-size: 30px;
+font-size: 25spx;
+color: #13444b;
 }
 @media(max-width:768px){
   .info-text{
@@ -292,51 +308,73 @@ font-size: 10px;
 
 
 /* categorias */
-.categorii{
+
+.seccion-portafor {
+  background-color: #54595b;
+  padding: 20px 0;
+}
+.title-cardflip{
+  font-family:  serif;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.card-img-top{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.seccion-category{
-    padding: 5px 0;
+.title-portf {
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #636c70ce;
+  border-radius: 1%;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &:hover {
+      background-color: #3A7680;
+  }
 }
-.card-img-category{
-    width: 100%;
-    object-fit: cover;
+
+.title-portf a {
+  text-decoration: none;
+  color: #FFF;
 }
-.card-body{
-    background-color: rgba(128, 128, 128, 0.349);
-}
-.h5-card {
-    font-size: 23px;
-    font-weight: bold;
-    text-align: center;
-}
-.seccion-category .title-services3{
-    color: #000;
-    font-size: 55px;
-    padding: 10px 0;
-    font-weight: bold;
-}
+
+
+
+
+
 /* FIN CATEGORIA */
+
+
+
+
 
 /* swiper */
 .swiper-car{
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #efefef;
+  background: #cec7c7;
 }
 .swiper-destacados{
   color: #000;
-  font-size: 42px;
+  text-decoration:overline;
+  text-decoration-color: #565151;
+  font-size: 30px;
   font-weight: 500;
+  padding: 10px 0;
   text-align: center;
+
 }
 .img-swiper{
   object-fit: contain ;
-}
-.container {
-  width: 100%;
-  padding: 40px 0;
 }
 .slide-container {
   margin: 0 30px;
