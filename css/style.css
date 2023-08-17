@@ -138,7 +138,7 @@ body{
   }
 }
 .localit{
-  color: rgb(144, 40, 40);
+  color: #13444b;
 }
 .carousel{
     grid-area: "carrou";
