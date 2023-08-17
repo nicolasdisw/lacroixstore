@@ -168,6 +168,9 @@ body{
 .carousel-indicators{
   z-index: -100;
 }
+.carousel-control-next-icon{
+  color: #0077B5  ;
+}
 /* fin home */
 
 
@@ -327,7 +330,6 @@ font-size: 10px;
   font-family: 'Montserrat', sans-serif;
 
 }
-
 .card-img-top{
   width: 100%;
   height: 100%;
@@ -388,7 +390,6 @@ font-size: 10px;
     font-size: 20px;
   }
 }
-
 .img-swiper{
   object-fit: contain ;
 }
@@ -413,7 +414,8 @@ font-size: 10px;
   align-items: center;
   column-gap: 12px;
   padding: 15px;
-  background-color: #3b393980;
+  background-color: #0d2b30d4;
+  color: #fff;
 }
 .card .profile-details img {
   height: 40px;
@@ -435,6 +437,17 @@ font-size: 10px;
   width: 40px;
   background: #fff;
   border-radius: 50%;
+}
+.swiper-desliza{
+  color: #0d6a7b;
+  
+}
+@media(max-width:480px){
+  .swiper-desliza{
+    color: #0e0f10;
+    font-size: 17px;
+  }
+
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after {
@@ -622,42 +635,13 @@ object-fit: contain;
   background-size: cover;
   text-align: center;
 }
-
-
 .card-img-top__services-3{
   height: 250px;
   object-fit: contain;
-  }
+}
 
 
 /* --------TERCERA TANDA DE PRODUCTOS */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -739,7 +723,7 @@ object-fit: contain;
   footer .content .link-boxes{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   footer .content .link-boxes .box{
     width: calc(100% / 5 - 10px);
