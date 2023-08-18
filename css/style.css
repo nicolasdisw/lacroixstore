@@ -223,12 +223,33 @@ body{
 }
 .text h2{
   text-align: center;
-    font-size: 90px;
+    font-size: 80px;
     font-weight: 600;
     margin-bottom: 10px;
     padding-top: 15px;
     color: #fff;
 }
+@media(max-width:768px){
+.text h2{
+  text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    color: #fff;
+}
+}
+@media(max-width:480px){
+.text h2{
+  text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    color: #fff;
+}
+}
+
 .text p{
   text-align: left;
   padding: 0 10px;
@@ -236,11 +257,13 @@ body{
 }
 @media(max-width:768px){
   .text p{
+    font-size: 19px;
     text-align: center;
     padding: 0 10px;
   }
  
 }
+
 .about p{
   color: #000; 
 }
